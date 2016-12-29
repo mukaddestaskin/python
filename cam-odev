@@ -1,0 +1,11 @@
+a=1
+while a==1:
+	y = int(input("Satır değeri giriniz:"))
+	if y!= 73:
+		for i in range(0, (2 * y)):
+			if i % 2 == 1:
+				print((((2 * y) - i) // 2) * " ", i * "*")
+		for x in range(0, (y // 2)):
+			print((((2 * y) // 2) - 2) * " ", "***")
+	else:
+		break
