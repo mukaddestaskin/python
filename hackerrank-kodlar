@@ -4,6 +4,7 @@
 
 
 #2
+         #doğru kabul etti
         N, M = map(int,input().split()) # More than 6 lines of code will result in 0 score. Blank lines are not counted.
        for i in range(1,N,2):
            print((((M-(i*3)))//2)*"-"+".|."*i+((M-(i*3))//2)*"-")
@@ -18,3 +19,20 @@
       for i in xrange(N-2, -1, -2): 
           print ( str('.|.')*i ).center(M, '-')
           
+#3
+            #doğru ama kabul etmedi onların istediği gibi değil
+            x = int(input())
+            for i in range(1,x+1):
+                   d=str(i)
+                   o=str(oct(i)[2:])
+                   h=str(hex(i)[2:])
+                   b=str(bin(i)[2:])
+                   print(d,o,h,b)
+       #3 sitedeki çözüm (benim bilgisayarda çalışmadı!)
+            def fun(N):
+                width = len(bin(N)) - 2
+                for i in range(1,N+1):
+                    print ("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i,width = width))
+            n = input()
+            fun(n)
+    
