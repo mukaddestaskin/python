@@ -35,4 +35,8 @@
                     print ("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i,width = width))
             n = input()
             fun(n)
-    
+       #3 başka çözüm yolu (sitenin form kısmından)
+                i = int(input())
+                [print(("%" + str(len(bin(i)[2:])) + "d %" + str(len(bin(i)[2:])) + "o %" + 
+                str(len(bin(i)[2:])) + "X %" + str(len(bin(i)[2:])) + "d") %
+                (j,j,j,int(bin(j)[2:]))) for j in range(1, i+1)]
