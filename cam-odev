@@ -1,8 +1,0 @@
-while True:
-    x = int(input())
-    if x==73:
-        break
-    for i in range(1,x+1):
-        print((x-i)*" "+(2*i-1)*"*")
-    for i in range(x//2):
-        print(((2*x-3)//2)*" "+ "***")
