@@ -1,0 +1,62 @@
+#! python3
+A=[]
+B=[]
+C=[]
+y=1
+print ("A","B","C")
+while y==1:
+    x=input(" ")
+    if x=="GOSTER":
+        print("A arkadaşları",A)
+        print("B arkadaşları",B)
+        print("C arkadaşları",C)
+    elif x=="EKLE A B" or x=="EKLE B A":
+        a=A.count("B")
+        if a==0:
+            A.append("B")
+            B.append("A")
+            print("A ile B arkadaş oldu.")
+        else:
+            print("Zaten arkadaşlar!")
+    elif x=="EKLE B C"or x=="EKLE C B":
+        b = B.count("C")
+        if b == 0:
+            B.append("C")
+            C.append("B")
+            print("B ile C arkadaş oldu.")
+        else:
+            print("Zaten arkadaşlar!")
+    elif x=="EKLE A C"or x=="EKLE C A":
+        c = C.count("A")
+        if  c== 0:
+          A.append("C")
+          C.append("A")
+          print("A ile C arkadaş oldu.")
+        else:
+            print("Zaten arkadaşlar!")
+    elif x=="SIL A B" or x=="SIL B A":
+        a = A.count("B")
+        if a == 1:
+            A.remove("B")
+            B.remove("A")
+            print("A ile B artık arkadaş değil.")
+        else:
+            print("Zaten arkadaş değil")
+    elif x == "SIL B C" or x == "SIL C B":
+        b = B.count("C")
+        if b == 1:
+            B.remove("C")
+            C.remove("B")
+            print("B ile C artık arkadaş değil.")
+        else:
+            print("Zaten arkadaş değil")
+    elif x == "SIL A C" or x == "SIL C A":
+        c = C.count("A")
+        if c == 1:
+            A.remove("C")
+            C.remove("A")
+            print("A ile C artık arkadaş değil.")
+        else:
+            print("Zaten arkadaş değil")
+    elif x=="KAPAT":
+        break
