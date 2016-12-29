@@ -60,3 +60,69 @@ while y==1:
             print("Zaten arkadaş değil")
     elif x=="KAPAT":
         break
+        
+#HOCANIN KODLARI
+#! python3
+A = []
+B = []
+C = []
+print("Sosyal platform 3 kisiden olusuyor: A, B ve C\n")
+while True:
+    x = input()
+    if x.split(" ")[0] == "EKLE":
+        if (x.split(" ")[1] == "A" and x.split(" ")[2] == "B") or (x.split(" ")[1] == "B" and x.split(" ")[2] == "A"):
+            if "A" not in B and "B" not in A:
+                A.append("B")
+                B.append("A")
+                print("\n-- A ile B artik arkadas.\n")
+            else:
+                print("\n-- A ile B zaten arkadas!\n")
+
+        elif (x.split(" ")[1] == "A" and x.split(" ")[2] == "C") or (x.split(" ")[1] == "C" and x.split(" ")[2] == "A"):
+            if "A" not in C and "C" not in A:
+                A.append("C")
+                C.append("A")
+                print("\n-- A ile C artik arkadas.\n")
+            else:
+                print("\n-- A ile C zaten arkadas!\n")
+
+        elif (x.split(" ")[1] == "B" and x.split(" ")[2] == "C") or (x.split(" ")[1] == "C" and x.split(" ")[2] == "B"):
+            if "B" not in C and "C" not in B:
+                B.append("C")
+                C.append("B")
+                print("\n-- B ile C artik arkadas.\n")
+            else:
+                print("\n-- B ile C zaten arkadas!\n")
+
+
+    if x.split(" ")[0] == "SIL":
+        if (x.split(" ")[1] == "A" and x.split(" ")[2] == "B") or (x.split(" ")[1] == "B" and x.split(" ")[2] == "A"):
+            if "A" in B and "B" in A:
+                A.remove("B")
+                B.remove("A")
+                print("\n-- A ile B artik arkadas degil.\n")
+            else:
+                print("\n-- A ile B zaten arkadas degil!\n")
+
+        elif (x.split(" ")[1] == "A" and x.split(" ")[2] == "C") or (x.split(" ")[1] == "C" and x.split(" ")[2] == "A"):
+            if "A" in C and "C" in A:
+                A.remove("C")
+                C.remove("A")
+                print("\n-- A ile C artik arkadas degil.\n")
+            else:
+                print("\n-- A ile C zaten arkadas degil!\n")
+
+        elif (x.split(" ")[1] == "B" and x.split(" ")[2] == "C") or (x.split(" ")[1] == "C" and x.split(" ")[2] == "B"):
+            if "B" in C and "C" in B:
+                B.remove("C")
+                C.remove("B")
+                print("\n-- B ile C artik arkadas degil.\n")
+            else:
+                print("\n-- B ile C zaten arkadas degil!\n")
+
+    elif x.split(" ")[0] == "KAPAT":
+        break
+    elif x == "GOSTER":
+        print("\nA'nin arkadaslari: ", A)
+        print("B'nin arkadaslari: ", B)
+        print("C'nin arkadaslari: ", C ,"\n")
